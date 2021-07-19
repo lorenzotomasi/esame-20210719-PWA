@@ -1,3 +1,4 @@
+import { ILocation } from '@/interface/ILocation';
 import axios from 'axios'
 import { createStore } from 'vuex'
 
@@ -5,25 +6,37 @@ const BaseUrl = "http://localhost:3000/";
 
 export default createStore({
   state: {
-    exampleObject: {},
+    location: [] as ILocation[],
+    filterLocation: [] as ILocation[],
   },
   getters: {
-    exampleGetters(state) {
-      return state.exampleObject;
+    locationGetters(state) {
+      return state.location;
     },
-    exampleComplexGetters: (state) => (studentId: string) => {
-      return studentId;
-    }
+    locationFilterGetters(state) {
+      return state.filterLocation;
+    },
+    // exampleComplexGetters: (state) => (studentId: string) => {
+    //   return studentId;
+    // }
   },
   mutations: {
-    ExampleFillRequest(state, exampleResul){
-      state.exampleObject = exampleResul;
+    fillLocation(state, result: ILocation[]){
+      state.location = result;
+    },
+    fillLocationFilter(state, result: ILocation[]){
+      state.filterLocation = result;
     }
   },
   actions: {
-    async ExampleCall({commit}, requiredId: number){
-      const res = await (await axios.get(`${BaseUrl}example/${requiredId}`));
-      commit("ExampleFillRequest", res.data);
+    async getPopularLocation({commit}){
+      const res = await (await axios.get(`${BaseUrl}popular-location/`));
+      commit("fillLocation", res.data);
+    },
+    async getLocationFilter({commit}, seachString: string){
+      const res = await (await axios.get(`${BaseUrl}location?q=${seachString}`));
+      console.log(res.data);
+      commit("fillLocationFilter", res.data);
     }
   }
 })

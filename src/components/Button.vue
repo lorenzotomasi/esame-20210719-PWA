@@ -7,6 +7,7 @@
       'btn-outline': variant === 'outline',
     }"
   >
+    <slot></slot>
     {{ content }}
   </button>
 </template>
@@ -35,7 +36,7 @@ export default defineComponent({
 </script>
 
 <style lang="scss" scoped>
-$primary-color: #000;
+$primary-color: #175592;
 $primary-color-contrast: #fff;
 $secondary-color: #239084;
 $secondary-color-contrast: #fff;

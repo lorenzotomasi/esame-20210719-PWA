@@ -1,13 +1,36 @@
 import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router'
-import Home from '../views/Home.vue'
-// import BaseComponent from '../components/BaseComponent.vue'
+import SearchLocation from '../view/SearchLocation.vue'
+import LocationDetails from '../view/LocationDetails.vue'
+import Cart from '../view/Cart.vue'
+import Ceckout from '../view/Ceckout.vue'
+import Home from '../view/Home.vue'
 
 const routes: Array<RouteRecordRaw> = [
-  // {
-  //   path: '/',
-  //   name: 'BaseComponent',
-  //   component: BaseComponent
-  // }
+  {
+    path: '/search-location',
+    name: 'Search Location',
+    component: SearchLocation
+  },
+  {
+    path: '/location-details/:id',
+    name: 'Location details',
+    component: LocationDetails
+  },
+  {
+    path: '/cart',
+    name: 'Cart',
+    component: Cart
+  },
+  {
+    path: '/ceckout',
+    name: 'Ceckout',
+    component: Ceckout
+  },
+  {
+    path: '/home',
+    name: 'Home',
+    component: Home
+  }
 ]
 
 const router = createRouter({
