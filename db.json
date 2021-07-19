@@ -1,0 +1,69 @@
+{
+    "popular-location": [
+        {
+            "id": "location1",
+            "name": "Colosseo",
+            "description": "Descrizione del colosseo",
+            "waitingTime": 6,
+            "averagePersonNumber": 180
+        },
+        {
+            "id": "location2",
+            "name": "Cinque terre",
+            "description": "Descrizione delle cinque terre",
+            "waitingTime": 10,
+            "averagePersonNumber": 70
+        },
+        {
+            "id": "location3",
+            "name": "Galleria degli Uffizi",
+            "description": "Descrizione della galleria degli Uffizi",
+            "waitingTime": 10,
+            "averagePersonNumber": 70
+        },
+        {
+            "id": "location4",
+            "name": "Ponte vecchio",
+            "description": "Descrizione del ponte vecchio",
+            "waitingTime": 1,
+            "averagePersonNumber": 200
+        }
+    ],
+    "location": [
+        {
+            "id": "location1",
+            "name": "Colosseo",
+            "description": "Descrizione del colosseo",
+            "waitingTime": 6,
+            "averagePersonNumber": 180
+        },
+        {
+            "id": "location2",
+            "name": "Cinque terre",
+            "description": "Descrizione delle cinque terre",
+            "waitingTime": 10,
+            "averagePersonNumber": 70
+        },
+        {
+            "id": "location3",
+            "name": "Galleria degli Uffizi",
+            "description": "Descrizione della galleria degli Uffizi",
+            "waitingTime": 10,
+            "averagePersonNumber": 70
+        },
+        {
+            "id": "location4",
+            "name": "Ponte vecchio",
+            "description": "Descrizione del ponte vecchio",
+            "waitingTime": 1,
+            "averagePersonNumber": 200
+        },
+        {
+            "id": "location5",
+            "name": "Capri",
+            "description": "Descrizione di capri",
+            "waitingTime": 1,
+            "averagePersonNumber": 200
+        }
+    ]
+}
